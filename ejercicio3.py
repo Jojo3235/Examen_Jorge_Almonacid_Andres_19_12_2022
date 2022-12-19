@@ -1,3 +1,4 @@
+#Creamos una diccionario que nos relacione los numeros con su palabra en ingles
 numeros = {0: 'zero',
             1: 'one',
             2: 'two',
@@ -10,6 +11,7 @@ numeros = {0: 'zero',
             9: 'nine'
             }
 
+#Creamos la funcion que nos pida un numero
 def pedir_numero():
     while True:
         try:
@@ -21,5 +23,9 @@ def pedir_numero():
         except ValueError:
             print("El valor introducido no es un número")
 
+#Creamos la funcion que nos separe los digitos del numero en una lista
+def separar_numero_lista(n):
+    lista = []
+    pass
 def numbersOfLetters(n):
     pass
