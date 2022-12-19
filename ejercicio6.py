@@ -52,4 +52,4 @@ def main():
 #Llamamos a la función main
 if __name__ == '__main__':
     main()
-    doctest.testmod()
+    doctest.testmod(main())
