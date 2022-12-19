@@ -14,7 +14,12 @@ def pedir_numero():
 def hollow_triangle():
     altura = pedir_numero()
     for i in range(altura):
-        print('_'*(altura-i)+'#'*(1+2*i)+'_'*(altura-i))
+        if i == 1:
+            print('_'*(altura-i)+'#'+'_'*(altura-i))
+        elif i == altura-1:
+            print('#'*(2*altura-1))
+        else:
+            print('_'*(altura-i)+'#'+'_'*(2*i)+'#'+'_'*(altura-i))
 
 def main():
     hollow_triangle()
