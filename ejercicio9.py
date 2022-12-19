@@ -44,19 +44,18 @@ def pedir_mes_cumpleaños():
         except ValueError:
             print("El valor introducido no es un número")
 
-#calcular la proxima vez que cae el cumpleaños en lunes
 def calcular_proximo_cumpleaños():
     dia = pedir_dia_cumpleaños()
     mes = pedir_mes_cumpleaños()
     año = datetime.datetime.now().year
     fecha_cumpleaños = datetime.datetime(año,mes,dia)
-    while fecha_cumpleaños.weekday() != 0:
-        fecha_cumpleaños = fecha_cumpleaños + datetime.timedelta(days=1)
-    return fecha_cumpleaños
+    dias_hasta_lunes = (7 - fecha_cumpleaños.weekday()) % 7
+    proximo_cp_lunes = fecha_cumpleaños + datetime.timedelta(days = dias_hasta_lunes)
+    return proximo_cp_lunes
 
 def main():
     if comprobar_edad():
-        print("Tu próximo cumpleaños que cae en lunes y tienes que trabajar es el: {}".format(calcular_proximo_cumpleaños()))
+        print('El proximo lunes que coincide con tu cumpleaños es el año {}'.format(calcular_proximo_cumpleaños()))
     else:
         print("No estás en edad laboral")
 
