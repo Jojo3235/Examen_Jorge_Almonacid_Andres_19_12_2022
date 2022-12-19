@@ -1,6 +1,7 @@
-import doctest
+import doctest  #importamos el modulo para la prueba
 
-def pedir_numero():
+#Creamos una función para pedir un número
+def pedir_numero():     
     while True:
         try:
             numero = int(input("Introduce un número: "))
@@ -11,6 +12,7 @@ def pedir_numero():
         except ValueError:
             print("El valor introducido no es un número")
 
+#Creamos la función que nos haga las capas de del triangulo
 def hollow_triangle():
     altura = pedir_numero()
     for i in range(altura+1):
@@ -21,9 +23,11 @@ def hollow_triangle():
         else:
             print('#'*(2*altura-1))
 
+#Creamos la función main
 def main():
     hollow_triangle()
 
+#Llamamos a la función main
 if __name__ == '__main__':
     main()
     doctest.testmod(main())

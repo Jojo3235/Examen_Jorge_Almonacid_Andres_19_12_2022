@@ -1,8 +1,11 @@
+#Importamos la librería datetime para trabajar con fechas
 import datetime
 
+#Creamos una función que nos devuelva el día actual
 def dia_actual():
     return datetime.datetime.now().day
 
+#Creamos la función para que pida la edad 
 def pedir_edad():
     while True:
         try:
@@ -14,6 +17,7 @@ def pedir_edad():
         except ValueError:
             print("El valor introducido no es un número")
 
+#Comprobamos que esté en edad laboral
 def comprobar_edad():
     edad  = pedir_edad()
     if edad > 22 and edad < 78:
@@ -21,7 +25,7 @@ def comprobar_edad():
     else:
         return False
 
-#pedir fecha de cumpleaños
+#pedimos la fecha de cumpleaños
 def pedir_dia_cumpleaños():
     while True:
         try:
@@ -33,6 +37,7 @@ def pedir_dia_cumpleaños():
         except ValueError:
             print("El valor introducido no es un número")
 
+#pedimos el mes de cumpleaños
 def pedir_mes_cumpleaños():
     while True:
         try:
@@ -44,6 +49,7 @@ def pedir_mes_cumpleaños():
         except ValueError:
             print("El valor introducido no es un número")
 
+#Calculamos cual es el proximo año en el que cae el cumpleaños en lunes
 def calcular_proximo_cumpleaños():
     dia = pedir_dia_cumpleaños()
     mes = pedir_mes_cumpleaños()
@@ -53,11 +59,13 @@ def calcular_proximo_cumpleaños():
     proximo_cp_lunes = fecha_cumpleaños + datetime.timedelta(days = dias_hasta_lunes)
     return proximo_cp_lunes
 
+#Creamos la función main
 def main():
     if comprobar_edad():
         print('El proximo lunes que coincide con tu cumpleaños es el año {}'.format(calcular_proximo_cumpleaños()))
     else:
         print("No estás en edad laboral")
 
+#Llamamos a la función main
 if __name__ == '__main__':
     main()
