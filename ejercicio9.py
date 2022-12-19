@@ -1,5 +1,6 @@
-#Importamos la librería datetime para trabajar con fechas
+#Importamos la librería datetime para trabajar con fechas y también importamos el modulo doctest
 import datetime
+import doctest
 
 #Creamos una función que nos devuelva el día actual
 def dia_actual():
@@ -69,3 +70,4 @@ def main():
 #Llamamos a la función main
 if __name__ == '__main__':
     main()
+    doctest.testmod(main())
