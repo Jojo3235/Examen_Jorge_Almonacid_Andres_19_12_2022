@@ -1,3 +1,4 @@
+#https://github.com/Jojo3235/Examen_Ordinaria_19_Diciembre_Jorge_Almonacid_Andres.git
 import numpy as np
 
 class Nonograma:
