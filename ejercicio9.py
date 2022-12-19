@@ -1,3 +1,5 @@
+import datetime
+
 def pedir_edad():
     while True:
         try:
